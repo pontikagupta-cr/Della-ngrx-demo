@@ -1,0 +1,17 @@
+{
+  "users": [
+
+    { "id": 1, "avatar": "/assets/avatar/ponti.jpg", "name": "Pontika", "role": "admin",
+       "email": "pontika.gupta@carterradley.com","deviceid": 111 },
+  
+    { "id": 2, "avatar": "/assets/avatar/pankaj.jpg", "name": "Pankaj", "role": "admin", "email": "pankaj.kumar@carterradley.com", "deviceid": 222 },
+  
+    // { id: 3, avatar: '/assets/avatar/vineet.png', name: 'Vineet', role: 'member', email: 'vineet.bhatt@carterradley.com', deviceid: 333 },
+  
+    // { id: 4, avatar: '/assets/avatar/meghna.png', name: 'Meghna', role: 'member', email: 'meghna.rao@carterradley.com', deviceid: 444 },
+  
+    // { id: 5, avatar: '/assets/avatar/amer.jpg', name: 'Amer', role: 'member', email: 'amer.obeidh@carterradley.com', deviceid: 555 },
+  
+    // { id: 6, avatar: '/assets/avatar/martin.jpg', name: 'Martin', role: 'manager', email: 'martin.radley@carterradley.com', deviceid: 666 }
+  ]
+}

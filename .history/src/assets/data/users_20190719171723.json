@@ -1,0 +1,10 @@
+{
+  "users": [
+
+    { "id": 1, "avatar": "/assets/avatar/ponti.jpg", "name": "Pontika", "role": "admin",
+       "email": "pontika.gupta@carterradley.com","deviceid": 111 },
+  
+    { "id": 2, "avatar": "/assets/avatar/pankaj.jpg", "name": "Pankaj", "role": "admin", "email": "pankaj.kumar@carterradley.com", "deviceid": 222 }
+   
+  ]
+}

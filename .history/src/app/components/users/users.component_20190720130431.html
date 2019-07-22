@@ -1,0 +1,88 @@
+   <input
+    matInput
+    (keyup)="applyFilter($event.target.value)"
+    placeholder="Search"
+  />
+
+{{users[0].name}}
+ <div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort>
+    <!-- Position Column -->
+    <ng-container matColumnDef="select">
+      <mat-header-cell *matHeaderCellDef  > </mat-header-cell>
+      <mat-cell *matCellDef="let user">
+        <mat-checkbox></mat-checkbox>
+      </mat-cell>
+    </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let users"> {{ users.id }} </mat-cell>
+    </ng-container>
+
+    <!-- Avatar Column -->
+    <ng-container matColumnDef="avatar">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        Avatar
+      </mat-header-cell>
+      <mat-cell *matCellDef="let user">
+        <img src="{{ user.avatar }}" class="avatar"
+      /></mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{ user.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Role Column -->
+    <ng-container matColumnDef="role">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        Role
+      </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{ user.role }} </mat-cell>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header >
+        Email
+      </mat-header-cell>
+      <mat-cell *matCellDef="let user" style="display:inline;margin-right:30px"> {{ user.email }} </mat-cell>
+    </ng-container>
+
+    <!-- Device ID Column -->
+    <ng-container matColumnDef="deviceid">
+      <mat-header-cell *matHeaderCellDef> Device </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{ user.deviceid }} </mat-cell>
+    </ng-container>
+    <!-- <mat-icon  (click)="openMembersEditDialog()">edit</mat-icon> -->
+    <!-- Device ID Column -->
+    <ng-container matColumnDef="icon">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let user"   > <mat-icon style="cursor: pointer">edit</mat-icon> </mat-cell>
+    </ng-container>
+    <!-- <mat-icon style="top:80px;"(click)="openMembersAddDialog()">add_circle_outline</mat-icon>  -->
+ <!-- Device ID Column -->
+ <ng-container matColumnDef="addbutton" >
+    <mat-header-cell *matHeaderCellDef> <mat-icon>add_circle_outline</mat-icon>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let user"> </mat-cell>
+
+   </ng-container>
+
+    
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+      (click)="logData(row)"
+      *matRowDef="let row; columns: displayedColumns">
+    </mat-row>
+  </mat-table>
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>
